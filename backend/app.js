@@ -39,7 +39,7 @@ app.use((req, res, next) => {
   next();
 });
 app.use(express.json());
-app.use("/", express.static(path.join(__dirname, "../dist/datis-ui")));
+// app.use("/", express.static(path.join(__dirname, "../dist/datis-ui")));
 
 app.use((req, res, next) => {
   res.sendFile(path.join(__dirname, "../dist/datis-ui/index.html"));
