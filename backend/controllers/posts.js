@@ -69,6 +69,7 @@ exports.getPosts = (req, res, next) => {
       return Post.count();
     })
     .then((count) => {
+      console.log(res);
       res.status(200).json({
         message: "Posts fetched successfully!",
         posts: fetchedPosts,
